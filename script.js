@@ -1,6 +1,6 @@
 const API_URL = ['localhost', '127.0.0.1', ''].includes(location.hostname)
   ? 'http://localhost:5000'
-  : 'https://YOUR-APP.onrender.com';
+  : 'https://my-skills-t88y.onrender.com/';
 
 const roles = ['Frontend Developer', 'UI/UX Designer', 'Web Developer', 'Creative Coder'];
 let roleIdx = 0, charIdx = 0, deleting = false;
