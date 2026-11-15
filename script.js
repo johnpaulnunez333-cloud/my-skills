@@ -23,7 +23,6 @@ function typeloop() {
 setInterval(() => { cursor.style.opacity = cursor.style.opacity === '0' ? '1' : '0'; }, 500);
 typeloop();
 
-// ====== SKILL BARS ======
 const skillBars = document.querySelectorAll('.skill-bar-fill');
 const barObs = new IntersectionObserver((entries) => {
   entries.forEach(e => {
@@ -32,7 +31,6 @@ const barObs = new IntersectionObserver((entries) => {
 }, { threshold: 0.3 });
 skillBars.forEach(b => barObs.observe(b));
 
-// ====== SCROLL: back-to-top + active nav link ======
 const scrollBtn = document.getElementById('scroll-top');
 window.addEventListener('scroll', () => {
   scrollBtn.classList.toggle('show', window.scrollY > 400);
@@ -47,7 +45,6 @@ window.addEventListener('scroll', () => {
   });
 });
 
-// ====== MOBILE NAV ======
 document.getElementById('nav-toggle').addEventListener('click', () => {
   document.getElementById('mobile-nav').classList.toggle('open');
 });
@@ -55,7 +52,6 @@ document.querySelectorAll('#mobile-nav a').forEach(a => {
   a.addEventListener('click', () => document.getElementById('mobile-nav').classList.remove('open'));
 });
 
-// ====== SCROLL REVEAL ======
 document.querySelectorAll('.stat-card, .skill-card, .project-card, .about-text, .contact-info, .contact-form')
   .forEach(el => el.classList.add('reveal'));
 const revealObs = new IntersectionObserver((entries) => {
@@ -65,7 +61,6 @@ const revealObs = new IntersectionObserver((entries) => {
 }, { threshold: 0.15 });
 document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
 
-// ====== CONTACT FORM -> PYTHON BACKEND ======
 const SEND_LABEL = '<i class="fas fa-paper-plane"></i> Send Message';
 let statusEl = null;
 
